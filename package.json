@@ -2,11 +2,16 @@
   "name": "onepiece-streaming-backend",
   "version": "1.0.0",
   "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "nodemon server.js"
   },
   "license": "GPL3",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
     "express": "^4.18.1",
     "mysql": "^2.18.1"
   },

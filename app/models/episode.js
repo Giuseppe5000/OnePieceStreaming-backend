@@ -16,6 +16,20 @@ class Episode {
         })
     }
 
+    static number(result) {
+        conn.query("SELECT count(IdEpisode) AS epNum FROM Episode", (err, rows) => {
+            if (err) {
+                result(err, null);
+            }
+            else if (rows[0]){
+                result(null, { "epNum": rows[0].epNum });
+            }
+            else {
+                result(null, null);
+            }
+        })
+    }
+
 }
 
 module.exports = Episode;

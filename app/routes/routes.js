@@ -5,6 +5,7 @@ module.exports = app => {
 
     // Routes
     router.get("/episode/:number", controller.episode);
+    router.get("/episodeNumber", controller.episodeNumber);
 
     app.use("/api", router);
 }

@@ -10,3 +10,14 @@ exports.episode = (req, res) => {
         else res.send(data);
     });
 }
+
+exports.episodeNumber = (req, res) => {
+    Episode.number((err, data) => {
+        if (err) {
+            res.status(404).send({
+                message: err.message || "Search error"
+            });
+        }
+        else res.send(data);
+    });
+}
